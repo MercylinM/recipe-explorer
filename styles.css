@@ -1,0 +1,70 @@
+.split-layout {
+ display: flex;
+ flex-direction: row;
+ gap: 3rem;
+ flex-wrap: wrap;
+}
+
+
+.image-side {
+ flex: 1;
+ min-width: 250px;
+ text-align: center;
+}
+
+
+.image-side img {
+ width: 100%;
+ border-radius: 10px;
+ object-fit: cover;
+}
+
+
+.content-side {
+ flex: 2;
+ min-width: 500px;
+ display: flex;
+ flex-direction: column;
+ gap: 2rem;
+}
+
+
+.tab-buttons {
+ display: flex;
+ gap: 1rem;
+ justify-content: center;
+}
+
+
+.tab-buttons button {
+ padding: 0.5rem 1rem;
+ border: none;
+ background-color: #ffa07a;
+ color: white;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+
+#categories-container button .active-tab,
+.tab-buttons .active-tab {
+ background-color: #ff6347;
+ font-weight: bold;
+}
+
+
+.ingredients-list {
+ list-style-type: disc;
+ padding-left: 3rem;
+}
+
+
+.instructions-text {
+ white-space: pre-line;
+ line-height: 1.5;
+}
+
+
+.save-btn{
+   width: 200px;
+}
