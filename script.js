@@ -75,10 +75,6 @@ document.getElementById('home-btn').addEventListener('click', () => {
 });
 
 
-
-
-
-
 searchBtn.addEventListener('click', () => {
     const query = input.value.trim();
     const type = document.getElementById('search-type').value;
@@ -105,10 +101,10 @@ searchBtn.addEventListener('click', () => {
 
     let ingredients = '';
     for (let i = 1; i <= 20; i++) {
-        const ing = meal[`strIngredient${i}`];
+        const ingredient = meal[`strIngredient${i}`];
         const measure = meal[`strMeasure${i}`];
-        if (ing && ing.trim()) {
-            ingredients += `<li>${ing} - ${measure}</li>`;
+        if (ingredient && ingredient.trim()) {
+            ingredients += `<li>${ingredient} - ${measure}</li>`;
         }
     }
 
@@ -128,7 +124,7 @@ searchBtn.addEventListener('click', () => {
           <div id="tab-content">
           <ul class="ingredients-list">${ingredients}</ul>
         </div>
-        <button class='save-btn' onclick="saveToCookLater(${meal.idMeal})">📌 Save to Cook Later</button>
+        <button class='save-btn' onclick="saveToCookLater(${meal.idMeal})">&#128204; Save to Cook Later</button>
       </div>
     </div>
   `;
@@ -243,9 +239,9 @@ function fetchCategories() {
         .then(data => {
             const catContainer = document.getElementById('categories-container');
             catContainer.innerHTML = '';
-            data.categories.forEach(cat => {
+            data.categories.forEach(category => {
                 const btn = document.createElement('button');
-                btn.textContent = cat.strCategory;
+                btn.textContent = category.strCategory;
                 btn.onclick = () => fetchByCategory(cat.strCategory);
                 catContainer.appendChild(btn);
             });
