@@ -1,13 +1,5 @@
-@font-face {
-    font-family: nunito;
-    src: url(fonts/static/Nunito-Bold.ttf);
-}
-@font-face {
-    font-family: nunito-reg;
-    src: url(fonts/static/Nunito-Medium.ttf);
-}
+
 body {
-    font-family: nunito-reg;
     background-color: #fff7f0;
     margin: 0;
     padding: 0;
@@ -50,7 +42,6 @@ button {
     color: white;
     cursor: pointer;
     border-radius: 4px;
-    font-family: nunito-reg;
 }
 
 
