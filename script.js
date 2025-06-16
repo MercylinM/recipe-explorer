@@ -97,6 +97,7 @@ searchBtn.addEventListener('click', () => {
         else fetchByIngredient(query);
     }
  });
+ 
  function showMealDetails(meal) {
     const modal = document.createElement('div');
     modal.className = 'modal';
@@ -198,6 +199,24 @@ function displayMeals(meals) {
        container.appendChild(card);
    });
 }
+
+function fetchRandomMeal() {
+   fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+       .then(res => res.json())
+       .then(data => {
+           displayMealsPaginated(data.meals, true); ;
+       });
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+   fetchMeals('chicken')
+})
+
+
+randomBtn.addEventListener('click', () => {
+   fetchRandomMeal();
+});
 
 
 function fetchByIngredient(ingredient) {
