@@ -61,6 +61,9 @@ function fetchSavedMeals(usePaginated = false) {
     ).then(data => {
         if (usePaginated) displayMealsPaginated(data, true);
         else displayMealsPaginated(fullMeals, true);;
+    }).catch(error => {
+        container.innerHTML = '<p>Sorry, there was an error loading your saved meals.</p>';
+        console.error('Error fetching saved meals:', error);
     });
 }
 
@@ -161,7 +164,11 @@ function fetchMeals(query) {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
         .then(res => res.json())
         .then(data => {
-            displayMealsPaginated(data.meals, true);;
+            displayMealsPaginated(data.meals, true);
+        })
+        .catch(error => {
+            container.innerHTML = '<p>Sorry, there was an error loading meals.</p>';
+            console.error('Error fetching meals:', error);
         });
 }
 
@@ -191,7 +198,11 @@ function fetchRandomMeal() {
        .then(res => res.json())
        .then(data => {
            displayMealsPaginated(data.meals, true); ;
-       });
+       })
+        .catch(error => {
+            container.innerHTML = '<p>Sorry, there was an error loading your meal.</p>';
+            console.error('Error fetching random meal:', error);
+        });
 }
 
 
