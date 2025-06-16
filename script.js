@@ -82,16 +82,6 @@ searchBtn.addEventListener('click', () => {
         if (type === 'name') fetchMeals(query);
         else fetchByIngredient(query);
     }
-});
-
-
-searchBtn.addEventListener('click', () => {
-    const query = input.value.trim();
-    const type = document.getElementById('search-type').value;
-    if (query) {
-        if (type === 'name') fetchMeals(query);
-        else fetchByIngredient(query);
-    }
  });
  
  function showMealDetails(meal) {

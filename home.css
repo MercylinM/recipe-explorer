@@ -33,6 +33,10 @@ header{
     height: 55px;
 }
 
+.logo h1{
+  color: #ffffff;
+}
+
 nav {
   display: flex;
   gap: 22px;
