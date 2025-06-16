@@ -61,7 +61,7 @@ nav a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 40px 7vw 60px 7vw;
-  min-height: 400px;
+  min-height: 80vh;
   overflow: hidden;
 }
 
@@ -109,4 +109,22 @@ nav a:hover {
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 6px 24px #0002;
+}
+.footer-bottom {
+  background: #E06436;
+  border: 1px solid #E06436;
+  height: 15%;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 15px;
+}
+
+.footer-bottom a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: underline;
 }
