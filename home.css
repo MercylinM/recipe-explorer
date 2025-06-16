@@ -1,0 +1,109 @@
+@font-face {
+    font-family: nunito;
+    src: url(fonts/static/Nunito-Bold.ttf);
+}
+@font-face {
+    font-family: nunito-reg;
+    src: url(fonts/static/Nunito-Medium.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: nunito-reg;
+  background: #e0c1a87c;
+  color: #222;
+  width: 100%;
+  box-sizing: border-box;
+}
+header{
+  background-color: #e06436;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+  /* border-bottom: 2px solid #000000; */
+
+  width: 75vw;
+  padding: 10px 32px 0 24px;
+}
+
+.logo img {
+  height: 55px;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  font-size: 18px;
+  font-family: nunito;
+  color: white;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 2px 0;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #000000;
+}
+
+.hero {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 7vw 60px 7vw;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 550px;
+  font-size: 2.2em;
+  margin-left: 3em;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 1em;
+  color: #222;
+  margin: 20px 0 26px 0;
+}
+
+.hero-content button {
+
+  color: #fff;
+    background: #e06436;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 54px;
+  font-size: 0.8em;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.hero-content button:hover {
+    background: #fd9026;
+}
+
+.hero-img {
+  z-index: 2;
+}
+
+.hero-img img {
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 24px #0002;
+}
