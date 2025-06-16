@@ -232,7 +232,7 @@ function fetchCategories() {
             data.categories.forEach(category => {
                 const btn = document.createElement('button');
                 btn.textContent = category.strCategory;
-                btn.onclick = () => fetchByCategory(cat.strCategory);
+                btn.onclick = () => fetchByCategory(category.strCategory);
                 catContainer.appendChild(btn);
             });
         });
@@ -254,4 +254,4 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchMeals('chicken');
     fetchCategories();
 });
-
+ 
